@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="img/logo-smk.png" type="image/gif" sizes="16x16">
+  <title>SMK CENDIKIA UTAMA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #26519E;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .jumbotron {
+      background-color: #26519E;
+      /* Orange */
+      color: #ffffff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    .container-fluid {
+      padding: 60px 50px;
+    }
+
+    .logo-small {
+      color: #26519E;
+      font-size: 50px;
+    }
+
+    .logo {
+      color: #26519E;
+      font-size: 200px;
+    }
+
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    .thumbnail:hover {
+      box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+    }
+
+    .thumbnail img {
+      width: 450px;
+      height: 300px;
+      margin-bottom: 10px;
+    }
+
+    .carousel-control.right,
+    .carousel-control.left {
+      background-image: none;
+      color: #2d2d30;
+    }
+
+    .carousel-indicators li {
+      border-color: #2d2d30;
+    }
+
+    .carousel-indicators li.active {
+      background-color: #26519E;
+    }
+
+    .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+
+    .item span {
+      font-style: normal;
+    }
+
+    .panel {
+      border: 1px solid #26519E;
+      border-radius: 0;
+      transition: box-shadow 0.5s;
+    }
+
+    .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+    }
+
+    .panel-footer .btn:hover {
+      border: 1px solid #26519E;
+      background-color: #fff !important;
+      color: #26519E;
+    }
+
+    .panel-heading {
+      color: #fff !important;
+      background-color: #26519E !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    .panel-footer {
+      background-color: #fff !important;
+    }
+
+    .panel-footer h3 {
+      font-size: 32px;
+    }
+
+    .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #26519E;
+      color: #fff;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      background-color: #26519E;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+      opacity: 0.9;
+    }
+
+    .navbar li a,
+    .navbar .navbar-brand {
+      color: #fff !important;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+      color: #26519E !important;
+      background-color: #fff !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #26519E;
+    }
+
+    .slideanim {
+      visibility: hidden;
+    }
+
+    .slide {
+      /* The name of the animation */
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      /* The duration of the animation */
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      /* Make the element visible */
+      visibility: visible;
+    }
+
+    /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+
+    .carousel-inner img {
+
+      /* make all photos black and white */
+      width: 100%;
+      /* Set width to 100% */
+      margin: auto;
+      height: 300;
+    }
+
+    .carousel-caption h3 {
+      color: #2d2d30 !important;
+    }
+
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+
+      .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 150px;
+      }
+    }
+
+    .jurusan-tkr img {
+      width: 350px;
+      height: 200px;
+    }
+
+    .jurusan-tkj img {
+      width: 350px;
+      height: 200px;
+    }
+
+    .jurusan-bdp img {
+      width: 350px;
+      height: 200px;
+    }
+    .visi{
+      color: black;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .misi{
+      color: black;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .logo-smk img{
+      width: 300;
+      height: 300;
+    }
+    .google-map iframe{
+      width: 95%;
+    }
+  </style>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">SMK CENDIKIA UTAMA</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">TENTANG</a></li>
+          <li><a href="#services">JURUSAN</a></li>
+          <li><a href="#portfolio">PRESTASI</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="img/sekolah-1.jpeg" alt="GyZyIx7" width="1400" height="300">
+        <div class="carousel-caption">
+          <h3>SMK CENDIKIA UTAMA</h3>
+          <p>Smk favorit dengan segudang prestasi</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/sekolah-2.jpg" alt="Tifo-940x300" width="1400" height="300">
+        <div class="carousel-caption">
+          <h3>SMK CENDIKIA UTAMA</h3>
+          <p>Smk favorit dengan segudang prestasi</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/sekolah-3.jpg" alt="w_900x700_29093014madrid_web" width="1400" height="300">
+        <div class="carousel-caption">
+          <h3>SMK CENDIKIA UTAMA</h3>
+          <p>Smk favorit dengan segudang prestasi</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>Tentang SMK CENDIKIA UTAMA</h2>
+        <h4>SMK Cendikia Utama Merupakan Salah Satu Sekolah Menengah Kejuruan (SMK) di Kuningan, Jawa Barat yang
+          berlokasi di Langseb, Kec. Lebakwangi, Kabupaten Kuningan, Jawa Barat, SMK Cendikia Utama siap mencetak
+          generasi muda yang siap pakai di dunia usaha atau dunia industri.</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis similique tempora neque quasi fuga facere consectetur nam, eius libero nemo inventore velit sequi rem sed? Perspiciatis odio quaerat eos.</p>
+        <button class="btn btn-default btn-lg"><a href="https://cendikiautama.blogspot.com/">Cek Profile
+            Selengkapnya</a></button>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+        <img class="logo-smk" src="img/logo-smk.png" alt="">
+      </div>
+      <div class="col-sm-8">
+        <div class="visi-misi">
+        <h2>VISI & MISI SMK CENDIKIA UTAMA</h2>
+        <div class="visi">
+        <h3>VISI</h3>
+        <ul>
+          <li>Menjadi  yang terbaik dalam mengejar Prestasi, Terampil, Kreatif dan Berkarakter</li>
+        </ul>
+      </div>
+      <div class="misi">
+        <h3>MISI</h3>
+        <ol>
+          <li>Menanamkan Iman dan Taqwa, sikap profesional  dan semangat berkompetisi  pada seluruh warga sekolah.</li>
+          <li>Membina siswa mandiri, cerdas, profesional , berkarakter.</li>
+          <li>Melatih  keterampilan, kejujuran, kedisiplinan dan kerjasama  dalam mengembangkan kemampuan siswa berpikir  positif, kreatif, dan inovatif.</li>
+          <li>Menyiapkan tamatan yang terampil, produktif dan mampu menyesuaikan diri terhadap perubahan.</li>
+        </ol>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Services Section) -->
+  <div id="services" class="container-fluid text-center">
+    <h2>JURUSAN SMK CENDIKIA UTAMA</h2>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="jurusan-tkr">
+          <img src="img/tkr.png" alt="">
+        </div>
+        <h4>TKR (TEKNIK KENDARAAN RINGAN)</h4>
+        <p>Teknik Kendaraan Ringan merupakan kompetensi keahlian dibidang Teknik Otomotif yang menekankan keahlian pada
+          bidang penguasaan jasa perbaikan kendaraan ringan. Kompetensi keahlian teknik kendaraan ringan menyiapkan
+          peserta didik untuk bekerja pada pekerjaan jasa perawatan dan perbaikan didunia usaha / industri.</p>
+      </div>
+      <div class="col-sm-4">
+        <div class="jurusan-tkj">
+          <img src="img/tkj.jpg" alt="">
+        </div>
+        <h4>TKJ (TEKNIK KOMPUTER JARINGAN)</h4>
+        <p>Teknik Komputer dan Jaringan merupakan ilmu berbasis Teknologi Informasi dan Komunikasi terkait kemampuan
+          algoritma, dan pemrograman komputer, perakitan komputer, perakitan jaringan komputer, dan pengoperasian
+          perangkat lunak, dan internet.</p>
+      </div>
+      <div class="col-sm-4">
+        <div class="jurusan-bdp">
+          <img src="img/bdp.jpg" alt="">
+        </div>
+        <h4 style="color:#303030;">BDP (BISNIS DARING DAN PEMASARAN)</h4>
+        <p>Kompetensi Keahlian Bisnis Daring dan Pemasaran adalah kompetensi keahlian yang mempelajari dasar-dasar
+          kemampuan serta keilmuan menjadi seorang marketing, dimana siswa akan mempelajari ilmu dasar marketing,
+          pengadministrasian barang , bisnis retail , serta kemampun praktik penjualan.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio" class="container-fluid text-center bg-grey">
+    <h2>PRESTASI SMK CENDIKIA UTAMA</h2>
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/prestasi-1.webp" alt="113242273">
+          <p><strong>Kejuaraan Lomba</strong></p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sunt, nihil dolorum sapiente quis deleniti soluta placeat ut, totam deserunt iste animi doloremque hic perferendis!</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/prestasi-1.webp" alt="real_madrid_world_champions_2014_by_jafarjeef-d8amewu">
+          <p><strong>Kejuaraan Lomba</strong></p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sunt, nihil dolorum sapiente quis deleniti soluta placeat ut, totam deserunt iste animi doloremque hic perferendis!</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/prestasi-1.webp" alt="1864608-39289212-2560-1440">
+          <p><strong>Kejuaraan Lomba</strong></p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sunt, nihil dolorum sapiente quis deleniti soluta placeat ut, totam deserunt iste animi doloremque hic perferendis!</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="contact" class="container-fluid bg-grey">
+      <h2 class="text-center">CONTACT</h2>
+      <div class="row">
+        <div class="col-sm-5">
+          <p>Kita Siap Melayani kalian 24 jam</p>
+          <p><span class="glyphicon glyphicon-map-marker"></span> Lebak Wangi, Kuningan, Indonesian</p>
+          <p><span class="glyphicon glyphicon-phone"></span> +6285*********</p>
+          <p><span class="glyphicon glyphicon-envelope"></span> smkcendikia.utama@gmail.com</p>
+        </div>
+        <div class="col-sm-7">
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+            </div>
+          </div>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" type="submit">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="googleMap" style="height:400px;width:100%;" class="google-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.018348067332!2d108.57574221537607!3d-7.007122070582151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f12513d06be6b%3A0xcf07c631d572dc0e!2sSMK%20Cendikia%20Utama!5e0!3m2!1sid!2sid!4v1661058715035!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+    <footer class="container-fluid text-center">
+      <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Copyright SMK Cendikia Utama &copy;2022
+      </p>
+    </footer>
+
+
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 900, function () {
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+    </script>
+
+</body>
+
+</html>
